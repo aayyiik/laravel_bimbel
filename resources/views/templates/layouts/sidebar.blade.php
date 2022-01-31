@@ -87,19 +87,20 @@
         <div class="sidebar-menu">
             <ul id="accordion-menu">
                 <li class="dropdown">
-                    <a href="javascript:;" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
+                    <a href="/dashboard" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-house-1"></span><span class="mtext">Dashbooard</span>
                     </a>
                     
                 </li>
 
+
                 <li class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-library"></span><span class="mtext">Tables</span>
+                        <span class="micon dw dw-library"></span><span class="mtext">Users</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="basic-table.html">Basic Tables</a></li>
-                        <li><a href="datatable.html">DataTables</a></li>
+                        <li><a href="/user">Data User</a></li>
+                        <li><a href="/role">Data Role</a></li>
                     </ul>
                 </li>
 
