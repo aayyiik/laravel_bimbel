@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MuridController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,13 +22,35 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard',[DashboardController::class,'index']);
-// ================ AUTH =================== //
-Route::get('/login',[AuthController::class,'login']);
 
-// ========================================= //
+// ================ AUTH =================== //
+Route::get('/login',[AuthController::class,'login'])->name('login');
+Route::post('/postlogin',[AuthController::class,'postlogin'])->name('postlogin');
+Route::get('/logout',[AuthController::class,'logout']);
+
+
+// ================ DASHBOARD ============== //
+Route::group(['middleware'=> ['auth']], function(){
+    Route::group(['middleware'=> ['cek_login:1']], function(){
+        Route::get('/dashboard',[DashboardController::class,'index']);
+    });
+});
 
 // ================ Murid ================== //
 
-Route::get('/santri',[MuridController::class, 'index']);
+Route::get('/murid',[UserController::class, 'index']);
+Route::get('murid/{id}/edit',[UserController::class, 'edit']);
+Route::get('/murid/create',[UserController::class, 'create']);
+Route::post('/murid/store',[UserController::class,'store']);
+Route::post('murid/{id}/update',[UserController::class, 'update']);
+Route::get('murid/{id}/delete',[UserController::class,'delete']);
 
+
+// ================= Guru =================== //
+Route::get('/guru',[UserController::class,'indexGuru']);
+
+// ================= ORTU =================== //
+Route::get('ortu',[UserController::class,'indexOrtu']);
+
+// ================= ROLE =================== //
+route::get('/role',[RoleController::class,'index']);

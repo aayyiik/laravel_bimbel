@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use GuzzleHttp\RedirectMiddleware;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 
 class AuthController extends Controller
 {
@@ -13,9 +14,9 @@ class AuthController extends Controller
     }
 
     public function postlogin(Request $request){
-        $this->validate($request,[
+        $this->validate($request, [
             'email'=>'required',
-            'passowrd'=>'required',
+            'password'=>'required',
         ]);
 
         $user = $request->only('email','password');
@@ -24,18 +25,22 @@ class AuthController extends Controller
             if($user->id_role=='1'){
                 return redirect('/dashboard');
             }elseif($user->id_role=='2'){
-                return redirect('/dashboard');
+                return redirect('/dashboardGuru');
             }elseif($user->id_role=='3'){
-                return redirect('/dashboard');
-            }elseif($user->id_role=='4'){
-                return redirect('/dashboard');
+                return redirect('/dashboardOrtu');
             }
 
             return redirect()->intended('/');
         }
 
-        return redirect('/login')
+        return redirect('login')
         ->withInput()
-        ->withErrors(['login_gagal' => 'Eror, salah input']);
+        ->withErrors(['login_gagal' => 'These credentials do not match our records.']);
+    }
+
+    public function logout(Request $request){
+        $request->session()->flush();
+        Auth::logout();
+        return redirect ('login');
     }
 }

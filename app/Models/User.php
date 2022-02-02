@@ -32,6 +32,7 @@ class User extends Authenticatable
         'hp',
         'tgl_masuk',
         'status',
+        'id_role',
     ];
 
     /**

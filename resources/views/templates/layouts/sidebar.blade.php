@@ -96,11 +96,40 @@
 
                 <li class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle">
-                        <span class="micon dw dw-library"></span><span class="mtext">Users</span>
+                        <span class="micon dw dw-group"></span><span class="mtext">Users</span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="/user">Data User</a></li>
-                        <li><a href="/role">Data Role</a></li>
+                        <li><a href="/ortu">Data Orang Tua</a></li>
+                        <li><a href="/guru">Data Guru</a></li>
+                        <li><a href="/staf">Data Staf</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/murid" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-user-1"></span><span class="mtext">Murid</span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/role" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-human-resources"></span><span class="mtext">Role</span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="/kemajuan" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-bar-chart1"></span><span class="mtext">Kemajuan</span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="javascript:;" class="dropdown-toggle">
+                        <span class="micon icon-copy dw dw-book-1"></span><span class="mtext">Pembelajaran</span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="/buku">Data Buku</a></li>
+                        <li><a href="/bab">Data Bab</a></li>
                     </ul>
                 </li>
 
