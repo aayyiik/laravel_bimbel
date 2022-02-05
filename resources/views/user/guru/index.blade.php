@@ -8,12 +8,12 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <div class="title">
-                            <h4>Data Wali Murid</h4>
+                            <h4>Data Guru</h4>
                         </div>
                         <nav aria-label="breadcrumb" role="navigation">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Wali Murid</li>
+                                <li class="breadcrumb-item active" aria-current="page">Guru</li>
                             </ol>
                         </nav>
                     </div>
@@ -41,7 +41,8 @@
                             <td>{{ $item->gender }}</td>
                             <td>{{ $item->hp }}</td>
                             <td>{{ $item->email }}</td>
-                            <td>{{ $item->status }}</td>
+                            <td><label class="label {{ ($item->status == 1) ? 'label-primary' : 'label-danger'}}">{{ ($item->status == 1)
+                                ? 'Aktif' : 'Deaktif' }}</label></td> 
                             
                             <td style="">
                                 <div class="dropdown">

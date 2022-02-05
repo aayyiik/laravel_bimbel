@@ -11,7 +11,7 @@ class Role extends Model
     protected $table = 'role';
     protected $fillable = ['jenis_role'];
 
-    public function detail_role(){
-        return $this->hasMany(Detail_Role::class,['id_ortu','id_guru','id_staf','id']);
+    public function user(){
+        return $this->hasMany(USer::class);
     }
 }

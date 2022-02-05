@@ -102,6 +102,7 @@
                         <li><a href="/ortu">Data Orang Tua</a></li>
                         <li><a href="/guru">Data Guru</a></li>
                         <li><a href="/staf">Data Staf</a></li>
+                        <li><a href="create/user">Tambah User</a></li>
                     </ul>
                 </li>
 

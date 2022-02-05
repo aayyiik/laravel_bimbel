@@ -54,8 +54,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function detail_role(){
-        return $this->hasMany(Detail_Role::class,'id_ortu','id_guru','id_staf','id');
+    public function role(){
+        return $this->belongsTo(Role::class,'id');
     }
 
 }

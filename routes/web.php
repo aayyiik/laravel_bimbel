@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BabController;
+use App\Http\Controllers\BukuController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\KemajuanController;
 use App\Http\Controllers\MuridController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -50,7 +53,29 @@ Route::get('murid/{id}/delete',[UserController::class,'delete']);
 Route::get('/guru',[UserController::class,'indexGuru']);
 
 // ================= ORTU =================== //
-Route::get('ortu',[UserController::class,'indexOrtu']);
+Route::get('/ortu',[UserController::class,'indexOrtu']);
+
+// ================= STAF =================== //
+Route::get('/staf',[UserController::class,'indexStaf']);
 
 // ================= ROLE =================== //
-route::get('/role',[RoleController::class,'index']);
+Route::get('/role',[RoleController::class,'index']);
+
+// ================= BUKU =================== //
+Route::get('/buku',[BukuController::class,'index']);
+Route::get('/buku/create',[BukuController::class,'create']);
+Route::post('/buku/store',[BukuController::class,'store']);
+
+// ================ BAB ===================== //
+Route::get('buku/{id}/bab',[BabController::class,'index']);
+Route::get('/bab/create',[BabController::class,'create']);
+Route::post('/bab/store',[BabController::class,'store']);
+
+// ================ + USER ================== //
+Route::get('/create/user',[UserController::class,'tambah']);
+Route::post('/proses/user',[UserController::class,'proses']);
+
+// ================ KEMAJUAN ================= //
+Route::get('/kemajuan',[KemajuanController::class,'index']);
+Route::get('/kemajuan/create',[KemajuanController::class,'create']);
+Route::post('/kemajuan/store',[KemajuanController::class,'store']);

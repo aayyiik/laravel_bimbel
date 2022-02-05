@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -15,12 +16,17 @@ class UserController extends Controller
 
     public function indexGuru(){
         $user = User::where('id_role','=','2')->get();
-        return view('guru.index',['user'=>$user]);
+        return view('user.guru.index',['user'=>$user]);
+    }
+
+    public function indexStaf(){
+        $user = User::where('id_role','=','1')->get();
+        return view('user.staf.index',['user'=>$user]);
     }
 
     public function indexOrtu(){
         $user = User::where('id_role','=','3')->get();
-        return view('ortu.index',['user'=>$user]);
+        return view('user.ortu.index',['user'=>$user]);
     }
 
     public function create(){
@@ -30,7 +36,6 @@ class UserController extends Controller
 
     }
     
-
     public function store(Request $request){
    
         User::create([
@@ -47,9 +52,7 @@ class UserController extends Controller
             'status' => 1,  
             'email' => request('email'),      
             'password'=>bcrypt('secret'),
-            'remember_token' => Str::random(10),
-            
-            
+            'remember_token' => Str::random(10),         
        ]);
 
         return redirect('/murid');
@@ -70,5 +73,30 @@ class UserController extends Controller
         $user = User::find($id);
         $user->delete($id);
         return redirect('/murid');
+    }
+
+
+    public function tambah(){
+       
+        $user = User::all();
+        $role = Role::where('id','<=','3')->get();
+        return view ('user.create', ['user'=>$user], compact('role'));
+
+    }
+    public function proses(Request $request){
+   
+        User::create([
+
+            'nama' => request('nama'),
+            'id_role' => request('id_role'),
+            'gender' => request('gender'),
+            'hp' => request('hp'),   
+            'status' => 1,  
+            'email' => request('email'),      
+            'password'=>bcrypt('secret'),
+            'remember_token' => Str::random(10),         
+       ]);
+
+        return redirect('/create/user');
     }
 }

@@ -17,10 +17,7 @@ class Detail_Role extends Model
     ];
 
     public function role(){
-        return $this->belongsTo(Role::class,['id_role','id']);
+        return $this->belongsToMany('');
     }
 
-    public function user(){
-        return $this->belongsTo(User::class,['id']);
-    }
 }
