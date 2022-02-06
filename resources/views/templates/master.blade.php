@@ -259,9 +259,10 @@
 		@include('templates.layouts.top_nav')
 		<!-- END NAVBAR -->
 		<!-- LEFT SIDEBAR -->
+		
 		@include('templates.layouts.sidebar')
 		<!-- END LEFT SIDEBAR -->
-		
+
     
 	<div class="mobile-menu-overlay"></div>
     <!-- MAIN -->
@@ -307,5 +308,43 @@
         });
            
     </script>  --}}
+
+
+    {{-- <script>
+    jQuery(document).ready(function() {
+        jQuery('select[name="fullname"]').on('change',function(){
+            var id_murid = jQuery(this).val;
+            if (id_murid) {
+                jQuery.ajax({
+                    url  : '/getMonth' +id_murid,
+                    type : "GET"
+                    dataType : "json",
+                    success:function(data){
+                        jQuery('select[name="month"]').empty();
+                        jQuery.each(data,function(key,value) {
+                            $('select[name="month"]').append('<option value="'+key='">'+value+'</option>');
+                        });
+                    }
+                });
+            }
+        else{
+            $('select[name="month"]').empty();
+        }
+    });
+});
+    </script> --}}
+
+
+	<script>
+	$('#search').on("click",function(){
+		var link = document.getElementById("id").value;
+
+		$.ajax({
+			url: window.location.href="ortuPagesKemajuan/"+ link
+		});
+	});
+	</script>
+
+	@yield('custom_scripts')
 </body>
 </html>

@@ -23,11 +23,11 @@ class AuthController extends Controller
         if(Auth::attempt($user)){
             $user = Auth::user();
             if($user->id_role=='1'){
-                return redirect('/dashboard');
+                return redirect('/dashboardStafPages');
             }elseif($user->id_role=='2'){
-                return redirect('/dashboardGuru');
+                return redirect('/dashboardGuruPages');
             }elseif($user->id_role=='3'){
-                return redirect('/dashboardOrtu');
+                return redirect('/ortuPagesKemajuan');
             }
 
             return redirect()->intended('/');

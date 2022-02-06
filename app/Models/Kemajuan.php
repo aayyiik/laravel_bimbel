@@ -30,6 +30,6 @@ class Kemajuan extends Model
     // }
     
     public function detail_kemajuan(){
-        return $this->hasMany(DetailKemajuan::class, 'id');
+        return $this->hasMany(DetailKemajuan::class, 'id_kemajuan','id');
     }
 }

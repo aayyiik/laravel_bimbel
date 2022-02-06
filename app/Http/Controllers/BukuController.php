@@ -26,4 +26,15 @@ class BukuController extends Controller
         Buku::create($request->all());
         return redirect('/buku');
     }
+
+    public function edit($id){
+        $buku = Buku::find($id);
+        return view ('buku.edit',['buku'=>$buku]);
+    }
+
+    public function update(Request $request, $id){
+        $buku = Buku::find($id);
+        $buku->update($request->all());
+        return redirect('/buku');
+    }
 }

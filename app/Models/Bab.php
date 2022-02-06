@@ -17,10 +17,10 @@ class Bab extends Model
     ];
 
     public function buku(){
-        return $this->belongsTo(Buku::class, 'id_buku');
+        return $this->belongsTo(Buku::class, 'id_buku','id');
     }
 
     public function detail_kemajuan(){
-        return $this->hasMany(DetailKemajuan::class, 'id');
+        return $this->hasMany(DetailKemajuan::class, 'id_bab','id');
     }
 }

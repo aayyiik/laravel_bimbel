@@ -58,6 +58,80 @@ class UserController extends Controller
         return redirect('/murid');
     }
 
+    public function createGuru(){
+       
+        $user = User::where('id_role','=','2')->get();
+        return view ('user.guru.create', $user);
+
+    }
+    
+    public function storeGuru(Request $request){
+   
+        User::create([
+
+            'nama' => request('nama'),
+            'id_role' => 2,
+            'gender' => request('gender'),
+            'hp' => request('hp'),   
+            'status' => 1,  
+            'email' => request('email'),      
+            'password'=>bcrypt('secret'),
+            'remember_token' => Str::random(10),         
+       ]);
+
+        return redirect('/guru');
+    }
+
+    public function createOrtu(){
+       
+        $user = User::where('id_role','=','3')->get();
+        return view ('user.ortu.create', $user);
+
+    }
+    
+    public function storeOrtu(Request $request){
+   
+        User::create([
+
+            'nama' => request('nama'),
+            'id_role' => 3,
+            'gender' => request('gender'),
+            'hp' => request('hp'),   
+            'status' => 1,  
+            'email' => request('email'),      
+            'password'=>bcrypt('secret'),
+            'remember_token' => Str::random(10),         
+       ]);
+
+        return redirect('/ortu');
+    }
+
+    public function createStaf(){
+       
+        $user = User::where('id_role','=','1')->get();
+        return view ('user.ortu.create', $user);
+
+    }
+    
+    public function storeStaf(Request $request){
+   
+        User::create([
+
+            'nama' => request('nama'),
+            'id_role' => 1,
+            'gender' => request('gender'),
+            'hp' => request('hp'),   
+            'status' => 1,  
+            'email' => request('email'),      
+            'password'=>bcrypt('secret'),
+            'remember_token' => Str::random(10),         
+       ]);
+
+        return redirect('/staf');
+    }
+
+
+
     public function edit($id){
         $user = User::find($id);
         return view('murid.edit',['user'=>$user]);

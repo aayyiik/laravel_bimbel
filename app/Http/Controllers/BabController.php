@@ -25,5 +25,17 @@ class BabController extends Controller
         Bab::create($request->all());
         return redirect('/buku');
     }
+
+    public function edit($id){
+        $bab = Bab::find($id);
+        // $buku = Buku::where('id_buku','=',$id)->get();
+        return view('bab.edit',['bab'=>$bab]);
+    }
+
+    public function update(Request $request, $id){
+        $bab = Bab::find($id);
+        $bab->update($request->all());
+        return redirect('/buku');
+    }
    
 }

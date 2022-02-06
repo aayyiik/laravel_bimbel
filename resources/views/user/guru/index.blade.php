@@ -17,6 +17,11 @@
                             </ol>
                         </nav>
                     </div>
+                    <div class="col-md-6 col-sm-12">
+                        <a href="/guru/create" class="btn btn-info float-right">
+                            TAMBAH
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">

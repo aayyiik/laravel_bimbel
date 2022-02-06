@@ -16,10 +16,10 @@ class DetailKemajuan extends Model
     ];
 
     public function kemajuan(){
-        return $this->belongsTo(kemajuan::class,'id');
+        return $this->belongsTo(kemajuan::class,'id_kemajuan','id');
     }
 
     public function bab(){
-        return $this->belongsTo(Bab::class,'id');
+        return $this->belongsTo(Bab::class,'id_bab','id');
     }
 }

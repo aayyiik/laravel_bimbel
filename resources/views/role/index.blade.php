@@ -17,6 +17,11 @@
                             </ol>
                         </nav>
                     </div>
+                    <div class="col-md-6 col-sm-12">
+                        <a href="/role/create" class="btn btn-info float-right">
+                            TAMBAH
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
@@ -35,7 +40,8 @@
                     <tbody>
                       <tr role="row" class="odd">
                             <td>{{ $item->jenis_role }}</td>
-                            <td>{{ $item->status }}</td>
+                            <td><label class="label {{ ($item->status == 1) ? 'label-primary' : 'label-danger'}}">{{ ($item->status == 1)
+                                ? 'Aktif' : 'Deaktif' }}</label></td>  
                             
                             <td style="">
                                 <div class="dropdown">
@@ -43,8 +49,8 @@
                                         <i class="dw dw-more"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list" style="">
-                                        <a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-                                        <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+                                        <a class="dropdown-item" href="/role/{{ $item->id }}/edit"><i class="dw dw-edit2"></i> Edit</a>
+                                        <a class="dropdown-item" href="/role/{{ $item->id }}/delete"><i class="dw dw-delete-3"></i> Delete</a>
                                     </div>
                                 </div>
                             </td>

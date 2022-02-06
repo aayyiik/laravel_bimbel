@@ -58,4 +58,27 @@ class KemajuanController extends Controller
 
   }
 
+  public function detailOrtu(){
+      $user = User::where('id_role','=','4')->get();
+      $kemajuan = Kemajuan::all();
+      return view('dashboard.ortu.detail', ['kemajuan'=>$kemajuan], compact('user'));
+  }
+
+  public function getMonth($id){
+      $month = Kemajuan::where('id_murid',$id)->pluck("nama","id");
+      return json_encode($month);
+  }
+
+  public function getData($id){
+      $data = Kemajuan::where('id_murid','=',$id)->get();
+      return view ('dashboard.ortu.show',['data'=>$data]);
+  }
+
+  public function detail($id){
+    $kemajuan = Kemajuan::find($id);
+    // $detail = DetailKemajuan::where('id_kemajuan','=',$id)->get();
+    // $murid = User::where('id_role','=','4')->get();
+    // $guru =  User::where('id_role','=','2')->get();
+    return view('kemajuan.detail',['kemajuan'=>$kemajuan]);
+  }
 }
