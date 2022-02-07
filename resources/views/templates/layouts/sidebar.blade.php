@@ -86,14 +86,15 @@
     <div class="menu-block customscroll">
         <div class="sidebar-menu">
             <ul id="accordion-menu">
+                
+
+                @if(auth()->user()->id_role=='1')
                 <li class="dropdown">
-                    <a href="/dashboard" class="dropdown-toggle no-arrow">
-                        <span class="micon dw dw-house-1"></span><span class="mtext">Dashbooard</span>
+                    <a href="/dashboardStafPages" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-house-1"></span><span class="mtext">Dashboard</span>
                     </a>
                     
                 </li>
-
-                @if(auth()->user()->id_role=='1')
                 <li class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle">
                         <span class="micon dw dw-group"></span><span class="mtext">Users</span>
@@ -121,6 +122,12 @@
                 @endif
 
                 @if(auth()->user()->id_role=='2')
+                <li class="dropdown">
+                    <a href="/dashboardGuruPages" class="dropdown-toggle no-arrow">
+                        <span class="micon dw dw-house-1"></span><span class="mtext">Dashboard</span>
+                    </a>
+                    
+                </li>
                 <li class="dropdown">
                     <a href="/kemajuan" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-bar-chart1"></span><span class="mtext">Kemajuan</span>
