@@ -82,8 +82,8 @@
                                                     <div class="col-sm-12 col-md-10">
                                                         <select class="custom-select col-12" name="id" id="id">
                                                             <option selected="false">--Pilih--</option>
-                                                            @foreach ($user as $murid)
-                                                                <option value="{{ $murid->id }}">{{ $murid->nama }}</option>
+                                                            @foreach ($murid as $mrd)
+                                                                <option value="{{ $mrd->id }}">{{ $mrd->nama }}</option>
                                                             @endforeach
                                                            
                                                         </select>

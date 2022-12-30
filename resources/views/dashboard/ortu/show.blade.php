@@ -8,12 +8,12 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-12">
                         <div class="title">
-                            <h4>Data Murid</h4>
+                            <h4>Data Kemajuan Murid</h4>
                         </div>
                         <nav aria-label="breadcrumb" role="navigation">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Murid</li>
+                                <li class="breadcrumb-item active" aria-current="page">Kemajuan Murid</li>
                             </ol>
                         </nav>
                     </div>
@@ -48,7 +48,7 @@
                                         <i class="dw dw-more"></i>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list" style="">
-                                        <a class="dropdown-item" href="/kemajuan/{{ $item->id }}/detail"><i class="dw dw-layers"></i>Detail</a>
+                                        <a class="dropdown-item" href="/ortuPagesKemajuan/{{ $item->id }}/detail"><i class="dw dw-layers"></i>Detail</a>
                                     </div>
                                 </div>
                             </td>

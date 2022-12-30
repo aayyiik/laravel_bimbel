@@ -56,9 +56,9 @@ class KemajuanController extends Controller
   }
 
   public function detailOrtu(){
-      $user = User::where('id_role','=','4')->get();
+      $murid = Murid::all();
       $kemajuan = Kemajuan::all();
-      return view('dashboard.ortu.detail', ['kemajuan'=>$kemajuan], compact('user'));
+      return view('dashboard.ortu.detail', ['kemajuan'=>$kemajuan], compact('murid'));
   }
 
   public function getMonth($id){

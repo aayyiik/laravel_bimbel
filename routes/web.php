@@ -8,6 +8,7 @@ use App\Http\Controllers\KemajuanController;
 use App\Http\Controllers\MuridController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -56,12 +57,14 @@ Route::group(['middleware'=> ['auth']], function(){
                 Route::get('/guru/create',[UserController::class,'createGuru']);
                 Route::get('/guru/{id}/edit',[UserController::class, 'editguru']);
                 Route::post('/guru/{id}/update',[UserController::class, 'updateGuru']);
+                Route::get('/guru/{id}/delete',[UserController::class, 'deleteGuru']);
                 Route::post('/guru/store',[UserController::class,'storeGuru']);
 
                 // ================= ORTU =================== //
                 Route::get('/ortu',[UserController::class,'indexOrtu']);
                 Route::get('/ortu/{id}/edit',[UserController::class, 'editOrtu']);
                 Route::post('/ortu/{id}/update',[UserController::class, 'updateOrtu']);
+                Route::get('/ortu/{id}/delete',[UserController::class, 'deleteOrtu']);
                 Route::get('/ortu/create',[UserController::class,'createOrtu']);
                 Route::post('/ortu/store',[UserController::class,'storeOrtu']);
 
@@ -69,6 +72,7 @@ Route::group(['middleware'=> ['auth']], function(){
                 Route::get('/staf',[UserController::class,'indexStaf']);
                 Route::get('/staf/create',[UserController::class,'createStaf']);
                 Route::get('/staf/{id}/edit',[UserController::class, 'editstaf']);
+                Route::get('/staf/{id}/delete',[UserController::class, 'deleteStaf']);
                 Route::post('/staf/{id}/update',[UserController::class, 'updateStaf']);
                 Route::post('/staf/store',[UserController::class,'storeStaf']);
 
@@ -91,6 +95,7 @@ Route::group(['middleware'=> ['auth']], function(){
     Route::group(['middleware'=> ['cek_login:3']], function(){
         Route::get('/ortuPagesKemajuan',[KemajuanController::class,'detailOrtu']);
         Route::get('/ortuPagesKemajuan/{id}',[KemajuanController::class,'getData']);
+        Route::get('/ortuPagesKemajuan/{id}/detail',[KemajuanController::class,'detail']);
 
     });
 
@@ -102,6 +107,9 @@ Route::group(['middleware'=> ['auth']], function(){
         Route::get('/buku/create',[BukuController::class,'create']);
         Route::post('/buku/store',[BukuController::class,'store']);
         Route::get('buku/{id}/edit',[BukuController::class,'edit']);
+        //tambahkan route delete 
+        Route::get('buku/{id}/delete', [BukuController::class, 'delete']);
+        //jika sudah siap mari jalankan di web nya.
         Route::post('buku/{id}/update',[BukuController::class,'update']);
 
         // ================ BAB ===================== //

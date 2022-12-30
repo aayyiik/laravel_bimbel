@@ -137,7 +137,18 @@ class UserController extends Controller
         return redirect('/staf');
     }
 
-    
+    public function editGuru($id){
+        $guru = User::find($id);
+        return view('user.guru.edit',['guru'=>$guru]);
+    }
+
+    public function updateGuru(Request $request, $id){
+        $guru = User::find($id);
+        $guru->update($request->all());
+        return redirect('/guru');
+    }
+
+
     public function editortu($id){
         $ortu = User::find($id);
         return view('user.ortu.edit',['ortu'=>$ortu]);
@@ -154,6 +165,13 @@ class UserController extends Controller
         $user->delete($id);
         return redirect('/staf');
     }
+
+    public function deleteGuru($id){
+        $user = User::find($id);
+        $user->delete($id);
+        return redirect('/guru');
+    }
+
     public function deleteOrtu($id){
         $user = User::find($id);
         $user->delete($id);

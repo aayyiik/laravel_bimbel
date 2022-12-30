@@ -32,6 +32,15 @@ class BukuController extends Controller
         return view ('buku.edit',['buku'=>$buku]);
     }
 
+    //kita akan membuat function delete dahulu
+
+    public function delete($id){
+        $buku = Buku::find($id);
+        $buku->delete($id);
+        return redirect('/buku');
+    }
+    // oke sudah siap. mari kita jalankan kembali
+
     public function update(Request $request, $id){
         $buku = Buku::find($id);
         $buku->update($request->all());
