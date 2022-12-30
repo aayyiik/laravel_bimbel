@@ -28,11 +28,10 @@
                         <input class="form-control" type="text" name="nama_buku" placeholder="Nama Buku">
                     </div>
                 </div>
-               <div class="html-editor pd-20 card-box mb-30">
-                    <h4 class="h4">Keterangan</h4>
-					<textarea class="textarea_editor form-control border-radius-0" name="keterangan" placeholder="Enter text ..."></textarea>
-				</div>
-
+                <div class="form-group">
+                    <label>Keterangan</label>
+                    <textarea class="form-control" name="keterangan"></textarea>
+                </div>
                 <div class="form-group row">
                     <div class="col-sm-12 col-md-10">
                         <input class="btn btn-primary" type="submit" value="Submit">

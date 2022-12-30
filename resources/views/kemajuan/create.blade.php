@@ -1,16 +1,9 @@
-
-
- <!DOCTYPE html>
+<!DOCTYPE html>
  <html>
  <head>
      <!-- Basic Page Info -->
      <meta charset="utf-8">
-     <title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
- 
-     <!-- Site favicon -->
-     <link rel="apple-touch-icon" sizes="180x180" href="http://127.0.0.1:8000/assets/vendors/images/apple-touch-icon.png">
-     <link rel="icon" type="image/png" sizes="32x32" href="http://127.0.0.1:8000/assets/vendors/images/favicon-32x32.png">
-     <link rel="icon" type="image/png" sizes="16x16" href="http://127.0.0.1:8000/assets/vendors/images/favicon-16x16.png">
+     <title>Mentari</title>
  
      <!-- Mobile Specific Metas -->
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -39,7 +32,6 @@
  <body>
      <div class="pre-loader">
          <div class="pre-loader-box">
-             <div class="loader-logo"><img src="http://127.0.0.1:8000/assets/vendors/images/deskapp-logo.svg" alt=""></div>
              <div class='loader-progress' id="progress_div">
                  <div class='bar' id='bar1'></div>
              </div>
@@ -115,7 +107,7 @@
                      <span class="user-icon">
                          <img src="http://127.0.0.1:8000/assets/vendors/images/photo1.jpg" alt="">
                      </span>
-                     <span class="user-name">Axcel Cakrawala</span>
+                     <span class="user-name"> {{ Auth::user()->nama}}</span>
                  </a>
                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
                      <a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
@@ -207,8 +199,7 @@
  <div class="left-side-bar">
      <div class="brand-logo">
          <a href="index.html">
-             <img src="http://127.0.0.1:8000/assets/vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
-             <img src="http://127.0.0.1:8000/assets/vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
+            <img src="{{ asset('assets/vendors/images/logo-bimbel.png') }}" alt="" class="light-logo">
          </a>
          <div class="close-sidebar" data-toggle="left-sidebar-close">
              <i class="ion-close-round"></i>
@@ -222,31 +213,6 @@
                          <span class="micon dw dw-house-1"></span><span class="mtext">Dashbooard</span>
                      </a>
                      
-                 </li>
- 
- 
-                 <li class="dropdown">
-                     <a href="javascript:;" class="dropdown-toggle">
-                         <span class="micon dw dw-group"></span><span class="mtext">Users</span>
-                     </a>
-                     <ul class="submenu">
-                         <li><a href="/ortu">Data Orang Tua</a></li>
-                         <li><a href="/guru">Data Guru</a></li>
-                         <li><a href="/staf">Data Staf</a></li>
-                         <li><a href="create/user">Tambah User</a></li>
-                     </ul>
-                 </li>
- 
-                 <li class="dropdown">
-                     <a href="/murid" class="dropdown-toggle no-arrow">
-                         <span class="micon dw dw-user-1"></span><span class="mtext">Murid</span>
-                     </a>
-                 </li>
- 
-                 <li class="dropdown">
-                     <a href="/role" class="dropdown-toggle no-arrow">
-                         <span class="micon dw dw-human-resources"></span><span class="mtext">Role</span>
-                     </a>
                  </li>
  
                  <li class="dropdown">
@@ -265,28 +231,8 @@
                      </ul>
                  </li>
  
-                     <div class="dropdown-divider"></div>
                  </li>
-                 <li>
-                     <div class="sidebar-small-cap">Extra</div>
-                 </li>
-                 <li>
-                     <a href="javascript:;" class="dropdown-toggle">
-                         <span class="micon dw dw-edit-2"></span><span class="mtext">Documentation</span>
-                     </a>
-                     <ul class="submenu">
-                         <li><a href="introduction.html">Introduction</a></li>
-                         <li><a href="getting-started.html">Getting Started</a></li>
-                         <li><a href="color-settings.html">Color Settings</a></li>
-                         <li><a href="third-party-plugins.html">Third Party Plugins</a></li>
-                     </ul>
-                 </li>
-                 <li>
-                     <a href="https://dropways.github.io/deskapp-free-single-page-website-template/" target="_blank" class="dropdown-toggle no-arrow">
-                         <span class="micon dw dw-paper-plane1"></span>
-                         <span class="mtext">Landing Page <img src="http://127.0.0.1:8000/assets/vendors/images/coming-soon.png" alt="" width="25"></span>
-                     </a>
-                 </li>
+
              </ul>
          </div>
      </div>
@@ -315,17 +261,11 @@
              </div>
           
              <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
-                <form action="/kemajuan/store" method="POST">
+                <form action="/kemajuan/{{Auth::user()->id}}/store" method="POST">
                     @csrf
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Guru</label>
                         <div class="col-sm-12 col-md-10">
-                            <select class="custom-select col-12" name="id_guru">
-                                <option selected="">--Pilih--</option>
-                                @foreach ($guru as $gr)
-                                    <option value="{{ $gr->id }}">{{ $gr->nama }}</option>
-                                @endforeach
-                            </select>
+                            <input class="form-control" type="hidden" name="id_guru" placeholder="Nama" value="{{Auth::user()->id }}">
                         </div>
                     </div>
     

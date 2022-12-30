@@ -128,8 +128,9 @@
                     </a>
                     
                 </li>
+
                 <li class="dropdown">
-                    <a href="/kemajuan" class="dropdown-toggle no-arrow">
+                    <a href="/kemajuan/{{ Auth::user()->id }}" class="dropdown-toggle no-arrow">
                         <span class="micon dw dw-bar-chart1"></span><span class="mtext">Kemajuan</span>
                     </a>
                 </li>
@@ -140,6 +141,10 @@
                     </a>
                     <ul class="submenu">
                         <li><a href="/buku">Data Buku</a></li>
+                        
+                    </ul>
+                    <ul class="submenu">
+                        <li><a href="/bab/create/">Data Bab</a></li>
                         
                     </ul>
                 </li>

@@ -20,7 +20,7 @@ class BukuController extends Controller
     public function store(Request $request){
         $this->validate($request,[
             'nama_buku'=> 'required',
-            'keterangan'=> 'required|max:300',
+            'keterangan'=> 'required|max:300'
         ]);
 
         Buku::create($request->all());

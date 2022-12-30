@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="col-md-6 col-sm-12">
-                        <a href="/kemajuan/create" class="btn btn-info float-right">
+                        <a href="/kemajuan/{{ Auth::user()->id }}/create" class="btn btn-info float-right">
                             TAMBAH
                         </a>
                     </div>

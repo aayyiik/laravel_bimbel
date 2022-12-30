@@ -112,9 +112,9 @@ Route::group(['middleware'=> ['auth']], function(){
         Route::post('bab/{id}/update',[BabController::class,'update']);
 
         // ================ KEMAJUAN ================= //
-        Route::get('/kemajuan',[KemajuanController::class,'index']);
-        Route::get('/kemajuan/create',[KemajuanController::class,'create']);
-        Route::post('/kemajuan/store',[KemajuanController::class,'store']);
+        Route::get('/kemajuan/{id}',[KemajuanController::class,'index']);
+        Route::get('/kemajuan/{id}/create',[KemajuanController::class,'create']);
+        Route::post('/kemajuan/{id}/store',[KemajuanController::class,'store']);
         Route::get('kemajuan/{id}/detail',[KemajuanController::class,'detail']);
     });
 }); 
