@@ -20,6 +20,8 @@ class CreateMuridTable extends Migration
             $table->date('tgl_lahir');
             $table->string('kota_lahir');
             $table->string('nama_ortu');
+            $table->date('tgl_masuk');
+            $table->integer('status')->default('1');
             $table->timestamps();
         });
     }

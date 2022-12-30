@@ -15,150 +15,191 @@ class MuridSeeder extends Seeder
     public function run()
     {
         $murid = [
-            [
-                "nama"=> "Morna Proby",
-                "gender"=> "M",
-                "tgl_lahir"=> "2013-02-04",
-                "kota_lahir"=> "Banī an Nahārī",
-                "nama_ortu"=> "Micah Parrett"
-              ], 
-              [
-                "nama"=> "Kyrstin Vickars",
-                "gender"=> "M",
-                "tgl_lahir"=> "2015-11-22",
-                "kota_lahir"=> "Sindon",
-                "nama_ortu"=> "Marika Jarvie"
-              ], 
-              [
-                "nama"=> "Dido Kuhlen",
-                "gender"=> "M",
-                "tgl_lahir"=> "2008-04-07",
-                "kota_lahir"=> "Shchëkino",
-                "nama_ortu"=> "Ewart Lutman"
-              ], 
-              [
-                "nama"=> "Anica Folomin",
-                "gender"=> "F",
-                "tgl_lahir"=> "2014-09-23",
-                "kota_lahir"=> "Brvenica",
-                "nama_ortu"=> "Todd Mallatratt"
-              ], 
-              [
-                "nama"=> "Iris Beckhouse",
-                "gender"=> "F",
-                "tgl_lahir"=> "2003-10-04",
-                "kota_lahir"=> "Boncis",
-                "nama_ortu"=> "Hersch Didsbury"
-              ], 
-              [
-                "nama"=> "Derek Jedrzejewsky",
-                "gender"=> "M",
-                "tgl_lahir"=> "2005-02-13",
-                "kota_lahir"=> "Mariel",
-                "nama_ortu"=> "Isadora Gurdon"
-              ], 
-              [
-                "nama"=> "Locke Chappelle",
-                "gender"=> "M",
-                "tgl_lahir"=> "2001-07-20",
-                "kota_lahir"=> "Roissy Charles-de-Gaulle",
-                "nama_ortu"=> "Husein Gheorghescu"
-              ], 
-              [
-                "nama"=> "Iggie Tomik",
-                "gender"=> "F",
-                "tgl_lahir"=> "2008-02-23",
-                "kota_lahir"=> "Nekla",
-                "nama_ortu"=> "Brocky Lukacs"
-              ], 
-              [
-                "nama"=> "Karoly Hendrik",
-                "gender"=> "M",
-                "tgl_lahir"=> "2003-06-28",
-                "kota_lahir"=> "Sara Kunda",
-                "nama_ortu"=> "Pansy Hudson"
-              ], 
-              [
-                "nama"=> "Cello Fleury",
-                "gender"=> "F",
-                "tgl_lahir"=> "2014-03-17",
-                "kota_lahir"=> "Neftegorsk",
-                "nama_ortu"=> "Frederick Murdy"
-              ], 
-              [
-                "nama"=> "Nat Tandey",
-                "gender"=> "M",
-                "tgl_lahir"=> "2014-12-24",
-                "kota_lahir"=> "Bolo",
-                "nama_ortu"=> "Zorah Hyndson"
-              ], 
-              [
-                "nama"=> "Zenia Dellar",
-                "gender"=> "M",
-                "tgl_lahir"=> "2003-05-16",
-                "kota_lahir"=> "Corozal",
-                "nama_ortu"=> "Erroll Willatt"
-              ], 
-              [
-                "nama"=> "Gian Gerrett",
-                "gender"=> "F",
-                "tgl_lahir"=> "2006-10-25",
-                "kota_lahir"=> "Slobodka",
-                "nama_ortu"=> "Wandis Crocroft"
-              ], 
-              [
-                "nama"=> "Aileen Iredale",
-                "gender"=> "F",
-                "tgl_lahir"=> "2008-10-31",
-                "kota_lahir"=> "Ganjur",
-                "nama_ortu"=> "Bren Hein"
-              ], 
-              [
-                "nama"=> "Ali Stoffels",
-                "gender"=> "M",
-                "tgl_lahir"=> "2006-11-08",
-                "kota_lahir"=> "São Luís do Quitunde",
-                "nama_ortu"=> "Pearl McOnie"
-              ], 
-              [
-                "nama"=> "Wolfgang Lowseley",
-                "gender"=> "F",
-                "tgl_lahir"=> "2007-12-15",
-                "kota_lahir"=> "Budzów",
-                "nama_ortu"=> "Sophey Aspland"
-              ], 
-              [
-                "nama"=> "Sebastiano Cobbin",
-                "gender"=> "F",
-                "tgl_lahir"=> "2002-06-29",
-                "kota_lahir"=> "Amarete",
-                "nama_ortu"=> "Frasier Glenfield"
-              ], 
-              [
-                "nama"=> "Gilly Mattacks",
-                "gender"=> "F",
-                "tgl_lahir"=> "2013-12-02",
-                "kota_lahir"=> "Togitsu",
-                "nama_ortu"=> "Lorraine Stott"
-              ], 
-              [
-                "nama"=> "Gustavus Brain",
-                "gender"=> "M",
-                "tgl_lahir"=> "2003-03-23",
-                "kota_lahir"=> "Pasarkolot",
-                "nama_ortu"=> "Cleon Winfindale"
-              ], 
-              [
-                "nama"=> "Tresa Brasher",
-                "gender"=> "M",
-                "tgl_lahir"=> "2006-06-30",
-                "kota_lahir"=> "Charras",
-                "nama_ortu"=> "Ariella Saphir"
-              ],
+        [
+            "nama"=> "Jobyna Haking",
+            "gender"=> "M",
+            "tgl_lahir"=> "2014-04-30",
+            "kota_lahir"=> "Hengdaohezi",
+            "nama_ortu"=> "Yovonnda Ronchka",
+            "tgl_masuk"=> "2022-02-14",
+            "status"=> 0,
+          ], 
+          [
+            "nama"=> "Thea Carvell",
+            "gender"=> "M",
+            "tgl_lahir"=> "2013-11-29",
+            "kota_lahir"=> "Warung Wetan",
+            "nama_ortu"=> "Coleen Stanier",
+            "tgl_masuk"=> "2022-11-06",
+            "status"=> 1
+          ], 
+          [
+            "nama"=> "Koren Bridewell",
+            "gender"=> "M",
+            "tgl_lahir"=> "2016-04-09",
+            "kota_lahir"=> "Digos",
+            "nama_ortu"=> "Colby Brophy",
+            "tgl_masuk"=> "2022-07-15",
+            "status"=> 0
+          ], 
+          [
+            "nama"=> "Donnajean Hans",
+            "gender"=> "M",
+            "tgl_lahir"=> "2012-02-27",
+            "kota_lahir"=> "Marsh Harbour",
+            "nama_ortu"=> "Tate Balcombe",
+            "tgl_masuk"=> "2022-07-05",
+            "status"=> 1
+          ], 
+          [
+            "nama"=> "Bonny Cordy",
+            "gender"=> "M",
+            "tgl_lahir"=> "2013-03-08",
+            "kota_lahir"=> "Jitan",
+            "nama_ortu"=> "Ira Egell",
+            "tgl_masuk"=> "2022-11-28",
+            "status"=> 0
+          ], 
+          [
+            "nama"=> "Lydie Frankland",
+            "gender"=> "F",
+            "tgl_lahir"=> "2012-06-05",
+            "kota_lahir"=> "Adorjan",
+            "nama_ortu"=> "Nicolette Brabender",
+            "tgl_masuk"=> "2022-10-25",
+            "status"=> 1
+          ], 
+          [
+            "nama"=> "Robinette Gurnell",
+            "gender"=> "M",
+            "tgl_lahir"=> "2011-07-14",
+            "kota_lahir"=> "New York City",
+            "nama_ortu"=> "Somerset Bellord",
+            "tgl_masuk"=> "2022-08-31",
+            "status"=> 0
+          ], 
+          [
+            "nama"=> "Randolf Rolfe",
+            "gender"=> "F",
+            "tgl_lahir"=> "2010-06-20",
+            "kota_lahir"=> "Marilao",
+            "nama_ortu"=> "Lothario Chrismas",
+            "tgl_masuk"=> "2022-07-23",
+            "status"=> 1
+          ], 
+          [
+            "nama"=> "Micah Waddup",
+            "gender"=> "F",
+            "tgl_lahir"=> "2012-08-03",
+            "kota_lahir"=> "Lundazi",
+            "nama_ortu"=> "Inger Kurdani",
+            "tgl_masuk"=> "2022-05-16",
+            "status"=> 0
+          ], 
+          [
+            "nama"=> "Bertine Daniaud",
+            "gender"=> "F",
+            "tgl_lahir"=> "2004-12-02",
+            "kota_lahir"=> "Frampol",
+            "nama_ortu"=> "Gunilla Esilmon",
+            "tgl_masuk"=> "2022-05-20",
+            "status"=> 0
+          ], 
+          [
+            "nama"=> "Yancy Kendrew",
+            "gender"=> "F",
+            "tgl_lahir"=> "2001-11-24",
+            "kota_lahir"=> "Avelar",
+            "nama_ortu"=> "Curran Judson",
+            "tgl_masuk"=> "2022-08-15",
+            "status"=> 0
+          ], 
+          [
+            "nama"=> "Lawry Kurtis",
+            "gender"=> "F",
+            "tgl_lahir"=> "2010-01-31",
+            "kota_lahir"=> "Yubileynyy",
+            "nama_ortu"=> "Wynnie Ledbury",
+            "tgl_masuk"=> "2022-04-08",
+            "status"=> 0
+          ], 
+          [
+            "nama"=> "Cord Rawlyns",
+            "gender"=> "M",
+            "tgl_lahir"=> "2011-07-17",
+            "kota_lahir"=> "Borlänge",
+            "nama_ortu"=> "Christoper Cardillo",
+            "tgl_masuk"=> "2022-11-14",
+            "status"=> 0
+          ], 
+          [
+            "nama"=> "Saree Keep",
+            "gender"=> "F",
+            "tgl_lahir"=> "2003-09-26",
+            "kota_lahir"=> "Pucallpa",
+            "nama_ortu"=> "Puff Loffel",
+            "tgl_masuk"=> "2022-09-24",
+            "status"=> 1
+          ], 
+          [
+            "nama"=> "Anabella Compston",
+            "gender"=> "M",
+            "tgl_lahir"=> "2016-03-07",
+            "kota_lahir"=> "Jinka",
+            "nama_ortu"=> "Dory Sibbson",
+            "tgl_masuk"=> "2022-04-11",
+            "status"=> 1
+          ], 
+          [
+            "nama"=> "Jordana Miranda",
+            "gender"=> "M",
+            "tgl_lahir"=> "2010-11-17",
+            "kota_lahir"=> "Yélimané",
+            "nama_ortu"=> "Marj Rye",
+            "tgl_masuk"=> "2022-12-23",
+            "status"=> 1
+          ], 
+          [
+            "nama"=> "Ilsa Sanders",
+            "gender"=> "F",
+            "tgl_lahir"=> "2007-01-09",
+            "kota_lahir"=> "U Minh",
+            "nama_ortu"=> "Olenolin Krzyzowski",
+            "tgl_masuk"=> "2022-12-20",
+            "status"=> 0
+          ], 
+          [
+            "nama"=> "Merilyn Overstall",
+            "gender"=> "F",
+            "tgl_lahir"=> "2016-05-10",
+            "kota_lahir"=> "Sanshan",
+            "nama_ortu"=> "Vita Lardeur",
+            "tgl_masuk"=> "2022-06-25",
+            "status"=> 1
+          ], 
+          [
+            "nama"=> "Patten Steele",
+            "gender"=> "F",
+            "tgl_lahir"=> "2012-02-17",
+            "kota_lahir"=> "Krathum Baen",
+            "nama_ortu"=> "Essa Maeer",
+            "tgl_masuk"=> "2022-06-19",
+            "status"=> 0
+          ], 
+          [
+            "nama"=> "Rafaela Lathee",
+            "gender"=> "M",
+            "tgl_lahir"=> "2007-07-23",
+            "kota_lahir"=> "Algoz",
+            "nama_ortu"=> "Jenda Mitten",
+            "tgl_masuk"=> "2021-12-31",
+            "status"=> 1
+          ],
         ];
 
-        foreach($murid as $key => $value){
-            Murid::created($value);
+        foreach($murid as $key => $value)
+        {
+            Murid::create($value);
         }
     }
 }

@@ -15,8 +15,9 @@ class Murid extends Model
         'gender',
         'tgl_lahir',
         'kota_lahir',
-        'tgl_lahir',
         'nama_ortu',
+        'tgl_masuk',
+        'status'
     ];
 
     public function kemajuan(){

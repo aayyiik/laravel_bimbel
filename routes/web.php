@@ -43,12 +43,12 @@ Route::group(['middleware'=> ['auth']], function(){
 
                 // ================ Murid ================== //
 
-                Route::get('/murid',[UserController::class, 'index']);
-                Route::get('murid/{id}/edit',[UserController::class, 'edit']);
-                Route::get('/murid/create',[UserController::class, 'create']);
-                Route::post('/murid/store',[UserController::class,'store']);
-                Route::post('murid/{id}/update',[UserController::class, 'update']);
-                Route::get('murid/{id}/delete',[UserController::class,'delete']);
+                Route::get('/murid',[MuridController::class, 'index']);
+                Route::get('murid/{id}/edit',[MuridController::class, 'edit']);
+                Route::get('/murid/create',[MuridController::class, 'create']);
+                Route::post('/murid/store',[MuridController::class,'store']);
+                Route::post('murid/{id}/update',[MuridController::class, 'update']);
+                Route::get('murid/{id}/delete',[MuridController::class,'delete']);
 
 
                 // ================= Guru =================== //

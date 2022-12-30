@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Bab;
 use App\Models\Buku;
 use App\Models\Kemajuan;
+use App\Models\Murid;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class DashboardController extends Controller
         return view ('dashboard.index');
     }
     public function indexStaf(){
-        $murid  = User::where('id_role','=','4')->count();
+        $murid  = Murid::where('status','=','1')->count();
         $guru = User::where('id_role','=','2')->count();
         $staf = User::where('id_role','=','1')->count();
         $ortu = User::where('id_role','=','3')->count();
@@ -23,7 +24,7 @@ class DashboardController extends Controller
     }
 
     public function indexGuru(){
-        $murid  = User::where('id_role','=','4')->count();
+        $murid  = Murid::where('status','=','1')->count();
         $bab = Bab::all()->count();
         $buku = Buku::all()->count();
         $kemajuan = Kemajuan::all()->count();

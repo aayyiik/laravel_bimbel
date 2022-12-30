@@ -36,26 +36,19 @@
                             <th class="sorting">Tgl Lahir</th>
                             <th class="sorting">Kota lahir</th>
                             <th class="sorting">Ortu</th>
-                            <th class="sorting">Alamat</th>
-                            <th class="sorting">Hp</th>
-                            <th class="sorting">Email</th>
-                            <th class="sorting">Tgl Masuk</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     
                     <tbody>
-                        @foreach ($user as $item)
+                        @foreach ($murid as $item)
                         <tr role="row" class="odd">
                             <td>{{ $item->nama }}</td>
                             <td>{{ $item->gender }}</td>
                             <td>{{ $item->tgl_lahir }}</td>
                             <td>{{ $item->kota_lahir }}</td>
                             <td>{{ $item->nama_ortu }}</td>
-                            <td>{{ $item->alamat_ortu }}</td>
-                            <td>{{ $item->hp }}</td>
-                            <td>{{ $item->email }}</td>
                             <td>{{ $item->tgl_masuk }}</td>
                             <td><label class="label {{ ($item->status == 1) ? 'label-primary' : 'label-danger'}}">{{ ($item->status == 1)
                                 ? 'Aktif' : 'Deaktif' }}</label></td>                           
