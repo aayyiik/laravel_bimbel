@@ -18,7 +18,7 @@ class CreateKemajuanTable extends Migration
             $table->unsignedBigInteger('id_guru');
             $table->foreign('id_guru')->references('id')->on('users');
             $table->unsignedBigInteger('id_murid');
-            $table->foreign('id_murid')->references('id')->on('users');
+            $table->foreign('id_murid')->references('id')->on('murid');
             $table->date('tgl');
             $table->string('status')->default('N');
             $table->timestamps();

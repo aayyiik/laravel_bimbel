@@ -17,7 +17,7 @@ class Kemajuan extends Model
     ];
 
     public function murid(){
-        return $this->belongsTo(User::class,'id_murid','id');
+        return $this->belongsTo(Murid::class,'id_murid','id');
     }
 
     public function guru(){
