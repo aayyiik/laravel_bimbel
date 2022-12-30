@@ -149,12 +149,16 @@ class UserController extends Controller
         return redirect('/ortu');
     }
 
-    public function delete($id){
+    public function deleteStaf($id){
         $user = User::find($id);
         $user->delete($id);
-        return redirect('/murid');
+        return redirect('/staf');
     }
-
+    public function deleteOrtu($id){
+        $user = User::find($id);
+        $user->delete($id);
+        return redirect('/ortu');
+    }
 
     public function tambah(){
        

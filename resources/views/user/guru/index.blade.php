@@ -27,7 +27,7 @@
             <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
                 <div class="row">
                     <div class="col-sm-12">
-                    <table class="data-table table stripe hover" id="DataTables_Table_0"  >
+                    <table class="data-table table stripe hover" id="DataTables_Table_0">
                     <thead>
                         <tr role="row">
                             <th class="sorting_asc" >Nama</th>

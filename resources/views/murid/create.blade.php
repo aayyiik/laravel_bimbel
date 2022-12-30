@@ -61,24 +61,6 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Alamat Orang Tua</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" name="alamat_ortu" type="text">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Hp</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" name="hp" type="integer">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Email</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" name="email" type="email">
-                        </div>
-                    </div>
-                    <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Tgl Masuk</label>
                         <div class="col-sm-12 col-md-10">
                             <input class="form-control" name="tgl_masuk" type="date">
