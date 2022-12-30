@@ -20,76 +20,58 @@
                 </div>
             </div>
             <div class="pd-20 bg-white border-radius-4 box-shadow mb-30">
-                <form action="/murid/{{ $user->id }}/update" method="POST">
+                <form action="/murid/{{ $murid->id }}/update" method="POST">
                     @csrf
                   
                     <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Nama Murid</label>
                         <div class="col-sm-12 col-md-10">
-                            <input class="form-control" name="nama"type="text" value="{{ $user->nama }}">
+                            <input class="form-control" name="nama"type="text" value="{{ $murid->nama }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Jenis Kelamin</label>
                         <div class="custom-control custom-radio mb-5">
-                            <input type="radio" id="gender4" name="gender" class="custom-control-input" value="M"  {{ $user->gender == 'M' ? 'checked' : ''}}>
+                            <input type="radio" id="gender4" name="gender" class="custom-control-input" value="M"  {{ $murid->gender == 'M' ? 'checked' : ''}}>
                             <label class="custom-control-label" for="gender4">Laki-Laki</label>
                         </div>
                         <div class="custom-control custom-radio mb-5">
-                            <input type="radio" id="gender5" name="gender" class="custom-control-input" value="F"  {{ $user->gender == 'F' ? 'checked' : ''}}>
+                            <input type="radio" id="gender5" name="gender" class="custom-control-input" value="F"  {{ $murid->gender == 'F' ? 'checked' : ''}}>
                             <label class="custom-control-label" for="gender5">Perempuan</label>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Tgl Lahir</label>
                         <div class="col-sm-12 col-md-10">
-                            <input class="form-control" name="tgl_lahir" type="date" value="{{ $user->tgl_lahir }}">
+                            <input class="form-control" name="tgl_lahir" type="date" value="{{ $murid->tgl_lahir }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Kota Lahir</label>
                         <div class="col-sm-12 col-md-10">
-                            <input class="form-control" name="kota_lahir" type="text" value="{{ $user->kota_lahir }}">
+                            <input class="form-control" name="kota_lahir" type="text" value="{{ $murid->kota_lahir }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Nama Orang Tua</label>
                         <div class="col-sm-12 col-md-10">
-                            <input class="form-control" name="nama_ortu" type="text" value="{{ $user->nama_ortu }}">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Alamat Orang Tua</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" name="alamat_ortu" type="text" value="{{ $user->alamat_ortu }}">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Hp</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" name="hp" type="integer" value="{{ $user->hp }}" >
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-12 col-md-2 col-form-label">Email</label>
-                        <div class="col-sm-12 col-md-10">
-                            <input class="form-control" name="email" type="email" value="{{ $user->email }}" >
+                            <input class="form-control" name="nama_ortu" type="text" value="{{ $murid->nama_ortu }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Tgl Masuk</label>
                         <div class="col-sm-12 col-md-10">
-                            <input class="form-control" name="tgl_masuk" type="date" value="{{ $user->tgl_masuk }}">
+                            <input class="form-control" name="tgl_masuk" type="date" value="{{ $murid->tgl_masuk }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-12 col-md-2 col-form-label">Status</label>
                         <div class="custom-control custom-radio mb-5">
-                            <input type="radio" id="status4" name="status" class="custom-control-input" value=1  {{ $user->status == 1 ? 'checked' : ''}}>
+                            <input type="radio" id="status4" name="status" class="custom-control-input" value=1  {{ $murid->status == 1 ? 'checked' : ''}}>
                             <label class="custom-control-label" for="status4">Aktif</label>
                         </div>
                         <div class="custom-control custom-radio mb-5">
-                            <input type="radio" id="status5" name="status" class="custom-control-input" value=0  {{ $user->status == 0 ? 'checked' : ''}}>
+                            <input type="radio" id="status5" name="status" class="custom-control-input" value=0  {{ $murid->status == 0 ? 'checked' : ''}}>
                             <label class="custom-control-label" for="status5">Deaktif</label>
                         </div>
                     </div>

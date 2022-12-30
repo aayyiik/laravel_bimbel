@@ -54,16 +54,22 @@ Route::group(['middleware'=> ['auth']], function(){
                 // ================= Guru =================== //
                 Route::get('/guru',[UserController::class,'indexGuru']);
                 Route::get('/guru/create',[UserController::class,'createGuru']);
+                Route::get('/guru/{id}/edit',[UserController::class, 'editguru']);
+                Route::post('/guru/{id}/update',[UserController::class, 'updateGuru']);
                 Route::post('/guru/store',[UserController::class,'storeGuru']);
 
                 // ================= ORTU =================== //
                 Route::get('/ortu',[UserController::class,'indexOrtu']);
+                Route::get('/ortu/{id}/edit',[UserController::class, 'editOrtu']);
+                Route::post('/ortu/{id}/update',[UserController::class, 'updateOrtu']);
                 Route::get('/ortu/create',[UserController::class,'createOrtu']);
                 Route::post('/ortu/store',[UserController::class,'storeOrtu']);
 
                 // ================= STAF =================== //
                 Route::get('/staf',[UserController::class,'indexStaf']);
                 Route::get('/staf/create',[UserController::class,'createStaf']);
+                Route::get('/staf/{id}/edit',[UserController::class, 'editstaf']);
+                Route::post('/staf/{id}/update',[UserController::class, 'updateStaf']);
                 Route::post('/staf/store',[UserController::class,'storeStaf']);
 
 

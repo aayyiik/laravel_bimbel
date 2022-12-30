@@ -29,13 +29,7 @@ class UserController extends Controller
         return view('user.ortu.index',['user'=>$user]);
     }
 
-    //create murid
-    public function create(){
-       
-        $user = User::where('id_role','=','4')->get();
-        return view ('murid.create', $user);
 
-    }
     
     public function store(Request $request){
    
@@ -130,21 +124,29 @@ class UserController extends Controller
 
         return redirect('/staf');
     }
-    // public function edit($id){
-    //     $user = User::find($id);
-    //     return view('murid.edit',['user'=>$user]);
-    // }
 
 
-    public function edit($id){
-        $user = User::find($id);
-        return view('murid.edit',['user'=>$user]);
+    public function editStaf($id){
+        $staf = User::find($id);
+        return view('user.staf.edit',['staf'=>$staf]);
     }
 
-    public function update(Request $request, $id){
-        $user = User::find($id);
-        $user->update($request->all());
-        return redirect('/murid');
+    public function updateStaf(Request $request, $id){
+        $staf = User::find($id);
+        $staf->update($request->all());
+        return redirect('/staf');
+    }
+
+    
+    public function editortu($id){
+        $ortu = User::find($id);
+        return view('user.ortu.edit',['ortu'=>$ortu]);
+    }
+
+    public function updateortu(Request $request, $id){
+        $ortu = User::find($id);
+        $ortu->update($request->all());
+        return redirect('/ortu');
     }
 
     public function delete($id){

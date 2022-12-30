@@ -11,4 +11,17 @@ class MuridController extends Controller
             $murid = Murid::all();
             return view('murid.index',['murid'=>$murid]);
     }
+
+    public function edit($id){
+        $murid = Murid::find($id);
+        return view('murid.edit', ['murid'=>$murid]);
+
+    }
+
+    public function update(Request $request, $id){
+        $murid = Murid::find($id);
+        $murid->update($request->all());
+        return redirect('/murid');
+
+    }
 }
