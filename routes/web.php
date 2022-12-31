@@ -8,6 +8,7 @@ use App\Http\Controllers\KemajuanController;
 use App\Http\Controllers\MuridController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
@@ -81,8 +82,9 @@ Route::group(['middleware'=> ['auth']], function(){
                 Route::get('/role',[RoleController::class,'index']);
                 Route::get('/role/create',[RoleController::class,'create']);
                 Route::post('/role/store',[RoleController::class,'store']);
-                Route::get('role/{id}/edit',[RoleController::class,'edit']);
-                Route::post('role/{id}/update',[RoleController::class,'update']);
+                Route::get('/role/{id}/edit',[RoleController::class,'edit']);
+                Route::get('/role/{id}/delete',[RoleController::class,'delete']);
+                Route::post('/role/{id}/update',[RoleController::class,'update']);
                 
                 // ================ + USER ================== //
                 Route::get('/create/user',[UserController::class,'tambah']);

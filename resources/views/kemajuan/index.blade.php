@@ -55,8 +55,6 @@
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list" style="">
                                         <a class="dropdown-item" href="/kemajuan/{{ $item->id }}/detail"><i class="dw dw-layers"></i>Detail</a>
-                                        <a class="dropdown-item" href="/kemajuan/{{ $item->id }}/edit"><i class="dw dw-edit2"></i> Edit</a>
-                                        <a class="dropdown-item" href="/kemajuan/{{ $item->id }}/delete"><i class="dw dw-delete-3"></i> Delete</a>
                                     </div>
                                 </div>
                             </td>

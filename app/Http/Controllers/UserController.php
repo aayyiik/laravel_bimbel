@@ -104,7 +104,7 @@ class UserController extends Controller
     public function createStaf(){
        
         $user = User::where('id_role','=','1')->get();
-        return view ('user.ortu.create', $user);
+        return view ('user.staf.create', $user);
 
     }
     
@@ -149,12 +149,12 @@ class UserController extends Controller
     }
 
 
-    public function editortu($id){
+    public function editOrtu($id){
         $ortu = User::find($id);
         return view('user.ortu.edit',['ortu'=>$ortu]);
     }
 
-    public function updateortu(Request $request, $id){
+    public function updateOrtu(Request $request, $id){
         $ortu = User::find($id);
         $ortu->update($request->all());
         return redirect('/ortu');

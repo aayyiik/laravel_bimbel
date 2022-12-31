@@ -35,6 +35,18 @@
                             <input class="form-control" name="jenis_role"type="text" value="{{ $role->jenis_role }}">
                         </div>
                     </div>
+                    <div class="form-group row">
+                        <label class="col-sm-12 col-md-2 col-form-label">Status</label>
+                        <div class="custom-control custom-radio mb-5">
+                            <input type="radio" id="status4" name="status" class="custom-control-input" value=1  {{ $role->status == 1 ? 'checked' : ''}}>
+                            <label class="custom-control-label" for="status4">Aktif</label>
+                        </div>
+                        <div class="custom-control custom-radio mb-5">
+                            <input type="radio" id="status5" name="status" class="custom-control-input" value=0  {{ $role->status == 0 ? 'checked' : ''}}>
+                            <label class="custom-control-label" for="status5">Deaktif</label>
+                        </div>
+                    </div>
+                    
                   
                     <div class="form-group row">
                         <div class="col-sm-12 col-md-10">

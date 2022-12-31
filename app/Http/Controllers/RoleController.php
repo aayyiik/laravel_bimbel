@@ -31,4 +31,10 @@ class RoleController extends Controller
         $role->update($request->all());
         return redirect('/role');
     }
+
+    public function delete($id){
+        $role = Role::find($id);
+        $role->delete($id);
+        return redirect('/role');
+    }
 }
